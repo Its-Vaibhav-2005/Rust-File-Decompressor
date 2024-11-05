@@ -12,7 +12,7 @@ fn main(){
         eprintln!("Usage: `source` `target`");
         return;
     }
-    let mut input = BufReader::new(
+    let input = BufReader::new(
         File::open(args().nth(1).unwrap()).unwrap()
     );
     let mut out = File::create(
